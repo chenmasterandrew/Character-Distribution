@@ -1,7 +1,7 @@
 """
 distribution.py
 Author: Andrew Chen
-Credit: <list sources used, if any>
+Credit: none D;
 
 Assignment:
 
