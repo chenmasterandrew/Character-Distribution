@@ -37,13 +37,25 @@ Notice about this example:
 * Letters that do not occur in the text are not listed in the output at all.
 """
 import string
-letters = string.ascii_lowercase
+
+letters = list(string.ascii_lowercase)
+
+numbers = []
+for y in range(0,26):
+    numbers.append(0)
+
 text = input("Please enter a string of text (the bigger the better): ")
 print ("The distribution of characters in \"{0}\" is:".format(text))
-lowertext = text.lower()
-textlist = list(lowertext)
-for x in textlist:
-    if x
 
-print (textlist)
-print (letters)
+textlist = list(text.lower())
+
+for x in range(0,len(textlist)):
+    for y in range(0, len(letters)):
+        if textlist[x] == letters[y]:
+            numbers[y] -= 1
+
+lnzip = list(zip(numbers, letters))
+lnzip.sort()
+
+for x in range(0,len(lnzip)):
+    print(lnzip[x][1]*-lnzip[x][0])
